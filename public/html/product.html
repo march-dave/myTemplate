@@ -1,0 +1,46 @@
+<h1 class="text-center">product</h1>
+
+<button class="btn btn-default btn-lg" ui-sref='newTransaction'>Add Product</button>
+
+<!-- <h3>Balance: {{balance | currency}}</h3> -->
+<h3></h3>
+
+<div class="form-group">
+     <label>Search:</label>
+     <input type="text" class="form-control" placeholder="Search" ng-model='searchFilter'>
+</div>
+
+<div class="form-group">
+  <label>orderBy:</label>
+  <input type="text" class="form-control" placeholder="Name" ng-model='sortOrder'>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th ng-click='sortBy("name")'>name</th>
+      <th ng-click='sortBy("description")'>Description</th>
+      <th ng-click='sortBy("price")'>Price</th>
+      <th ng-click='sortBy("category")'>Category</th>
+      <th ng-click='sortBy("image")'>Image</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr ng-repeat="product in products track by $index ">
+      <td>{{ product.name }}</td>
+      <td>{{ product.description }}</td>
+      <td>{{ product.price }}</td>
+      <td>{{ product.category }}</td>
+      <td>{{ product.image }}</td>
+    </tr>
+  </tbody>
+  <!-- <tfoot>
+    <tr>
+      <td></td>
+      <td>TOTALS:</td>
+      <td>{{totalCredit | currency}}</td>
+      <td>{{totalDebit | currency}}</td>
+    </tr>
+  </tfoot> -->
+</table>

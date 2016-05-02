@@ -1,6 +1,6 @@
 'use strict';
 
-var app = angular.module('starWarsApp');
+var app = angular.module('orgApp');
 
 app.service('StarWars', function($http, $q) {
 
