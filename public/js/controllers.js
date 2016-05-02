@@ -47,9 +47,10 @@ app.controller('productCtrl', function($scope, $state) {
 });
 
 app.controller('newTransactionCtrl', function($scope, $state) {
-  console.log('newTransactionCtrl');
+  $scope.addTransaction = function() {
 
-  // $scope.addTransaction = '';
+    $scope.products  = $scope.newTransaction;
+  }
 
 });
 
