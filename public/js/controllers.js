@@ -48,10 +48,10 @@ app.controller('productCtrl', function($scope, $state) {
 
 app.controller('newTransactionCtrl', function($scope, $state) {
   console.log('newTransactionCtrl');
+
+  // $scope.addTransaction = '';
+
 });
-
-
-
 
 app.controller('listCtrl', function($scope, $state, starDex) {
   console.log('listCtrl1111', starDex);
