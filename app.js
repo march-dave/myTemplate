@@ -1,5 +1,6 @@
 'use strict';
 
+
 const PORT = process.env.PORT || 3000;
 
 var express = require('express');
@@ -19,6 +20,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', require('./routes/index'));
 
 var server = http.createServer(app);
+
+
 
 server.listen(PORT, err => {
   console.log(err || `Server listening on port ${PORT}`);
